@@ -1,19 +1,19 @@
 (test
  (name test_ast)
- (libraries calculator_lib))
+ (libraries calculator))
 
 (test
  (name test_lexer)
- (libraries calculator_lib))
+ (libraries calculator))
 
 (test
  (name test_parser)
- (libraries calculator_lib))
+ (libraries calculator))
 
 (test
  (name test_eval)
- (libraries calculator_lib ounit2))
+ (libraries calculator ounit2))
 
 (test
  (name test_calculator)
- (libraries calculator_lib ounit2))
+ (libraries calculator ounit2))

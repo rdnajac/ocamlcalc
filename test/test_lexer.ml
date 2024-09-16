@@ -1,4 +1,4 @@
-open Calculator_lib
+open Calculator
 
 let test_lexer input expected =
   let lexbuf = Lexing.from_string input in

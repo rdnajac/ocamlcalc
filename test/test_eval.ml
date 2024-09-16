@@ -1,5 +1,5 @@
 open OUnit2
-open Calculator_lib
+open Calculator
 open Ast
 
 let test_eval _ =

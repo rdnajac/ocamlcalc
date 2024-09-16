@@ -1,5 +1,5 @@
 open OUnit2
-open Calculator_lib
+open Calculator
 
 let parse_and_eval input =
   let lexbuf = Lexing.from_string input in

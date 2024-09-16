@@ -1,4 +1,4 @@
-open Calculator_lib.Ast
+open Calculator.Ast
 
 let test_ast_types () =
   let _ = Add in

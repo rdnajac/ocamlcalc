@@ -1,4 +1,4 @@
-open Calculator_lib
+open Calculator
 open Ast
 
 let parse input =
