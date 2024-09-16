@@ -1,3 +1,8 @@
 (library
- (name calculator)
- (modules_without_implementation ast))
+ (name calculator_lib)
+ (modules_without_implementation ast)
+ (modules ast lexer parser eval))
+
+(ocamllex lexer)
+
+(ocamlyacc parser)
