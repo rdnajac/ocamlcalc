@@ -52,3 +52,13 @@ _opam/
 
 # Other
 .#*
+
+# ocamllex generated files
+lexer.ml
+
+# ocamlyacc generated files
+parser.ml
+parser.mli
+
+
+
