@@ -1,3 +1,4 @@
 (executable
+ (public_name calc)
  (name main)
- (libraries calculator_lib))
+ (libraries calculator))

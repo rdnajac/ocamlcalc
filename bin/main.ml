@@ -1,4 +1,4 @@
-open Calculator_lib
+open Calculator
 
 let () =
   let env = Hashtbl.create 8 in
@@ -15,6 +15,6 @@ let () =
         print_endline (string_of_int result)
       with
       | Failure msg -> print_endline ("Error: " ^ msg)
-      | Stdlib.Parsing.Parse_error -> print_endline "Parse error"
+      | Parsing.Parse_error -> print_endline "Parse error"
     done
   with End_of_file -> print_endline "\nGoodbye!"

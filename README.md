@@ -1,47 +1,57 @@
-# OCaml Calculator
+# OCaml Calculator Project
 
-A simple calculator in OCaml using a lexer and parser.
-
-## Project Structure
-
-1. `ast.mli`: Defines the Abstract Syntax Tree for our calculator language.
-2. `parser.mly`: Specifies the grammar rules for parsing expressions.
-3. `scanner.mll`: Defines the lexical analysis rules.
-4. `calc.ml`: Contains the main evaluation logic and program entry point.
-5. `Makefile`: Automates the build process.
+A simple calculator implemented in OCaml using a lexer and parser.
 
 ## Features
 
 - Basic arithmetic operations (addition, subtraction, multiplication, division)
-- Integer literals
-- Parentheses for grouping expressions
-- Variable assignments
-- Sequences of expressions
+- Integer literals and parentheses for grouping
+- Variable assignments and expression sequences
 
-## Building the Project
+## Project Structure
 
-To build the project, run:
+- `bin/`: Main executable code
+- `lib/`: Core logic (AST, parser, lexer, evaluator)
+- `test/`: Test files
+- `Makefile`: Alternative build process
+
+## Building and Running
+
+### Using dune (Recommended)
+
+```
+dune build
+dune exec calc
+dune test
+```
+
+### Using Makefile (Alternative)
 
 ```
 make
-```
-
-This will compile all necessary files and create an executable named `calc`.
-
-## Running the Calculator
-
-After building, you can run the calculator using:
-
-```
 ./calc
+make clean
 ```
 
-The calculator will read expressions from standard input and print the results.
+> [!NOTE]
+> The Makefile doesn't handle tests. Use dune for comprehensive testing.
 
-## Testing
+## Usage
 
-To run tests, use:
+Enter expressions at the prompt:
 
 ```
-./calc < calc.tb
+> 2 + 3
+5
+> x = 10
+10
+> y = 5
+5
+> x * y
+50
+> exit
 ```
+
+> [!TIP]
+> Type "exit" to quit.
+

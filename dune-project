@@ -5,11 +5,11 @@
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github rdnajac/ocamlcalc))
 
-(authors "Author Name")
+(authors "Ryan D. Najac")
 
-(maintainers "Maintainer Name")
+(maintainers "Ryan D. Najac")
 
 (license LICENSE)
 
@@ -17,9 +17,9 @@
 
 (package
  (name calculator)
- (synopsis "A short synopsis")
- (description "A longer description")
- (depends ocaml dune)
+  (synopsis "A simple calculator implemented in OCaml using lexer and parser generators (ocamllex, ocamlyacc)")
+  (description "A calculator supporting basic arithmetic operations, variable assignments, and expression sequences")
+(depends ocaml dune ounit2)
  (tags
   (topics "to describe" your project)))
 
