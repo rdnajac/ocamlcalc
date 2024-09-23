@@ -12,7 +12,9 @@
 %left TIMES DIVIDE
 
 %start expr
+%start rpn_expr
 %type <Ast.expr> expr
+%type <Ast.expr> rpn_expr
 
 %%
 
@@ -26,3 +28,20 @@ expr:
 | VARIABLE         { Var($1) }
 | VARIABLE ASN expr { Asn($1, $3) }
 | expr SEQ expr    { Seq($1, $3) }
+
+rpn_expr:
+| rpn_operand rpn_expr_tail { $2 $1 }
+
+rpn_expr_tail:
+| EOF { fun x -> x }
+| rpn_operator rpn_expr rpn_expr_tail { fun x -> $3 (Binop(x, $1, $2)) }
+
+rpn_operand:
+| LITERAL { Lit($1) }
+| VARIABLE { Var($1) }
+
+rpn_operator:
+| PLUS { Add }
+| MINUS { Sub }
+| TIMES { Mul }
+| DIVIDE { Div }

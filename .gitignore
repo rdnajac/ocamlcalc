@@ -59,6 +59,3 @@ lexer.ml
 # ocamlyacc generated files
 parser.ml
 parser.mli
-
-
-
